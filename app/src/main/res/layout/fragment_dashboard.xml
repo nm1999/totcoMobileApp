@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".dashboard">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <!--        linearlayout to cater for the first items before the recent sales-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp">
+                <!--        the welcome message-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="10dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome "
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Moses"
+                        android:textStyle="bold"
+                        android:layout_marginHorizontal="10dp"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        />
+
+                </LinearLayout>
+
+                <!--        Showing the total sales-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginVertical="10dp"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total Sales"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="UGX 45000000"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginVertical="8dp"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+
+
+                <!--        beginning of the cardview-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="5dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_margin="4dp"
+                    >
+
+                    <!--            A linearlayout to cater for the horizontal orientation-->
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginVertical="10dp"
+                        android:columnCount="4"
+                        android:rowCount="1"
+                        android:layout_gravity="center_horizontal"
+
+                        >
+
+                        <!--                a linearlayout to cater for the icon vertical orientation -->
+                        <LinearLayout
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:orientation="vertical"
+                            android:gravity="left"
+                            android:layout_marginHorizontal="2dp"
+                            android:layout_marginVertical="2dp">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                android:background="@drawable/icon_color"
+                                >
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_baseline_sell_24"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"
+                                android:text="invoices"
+                                android:gravity="center"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:orientation="vertical"
+                            android:layout_marginVertical="2dp"
+                            android:gravity="left"
+                            android:layout_marginHorizontal="2dp">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                android:background="@drawable/icon_color"
+                                >
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:padding="10dp"
+                                    android:src="@drawable/delivery"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"
+                                android:text="deliveries"
+                                android:gravity="center"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:orientation="vertical"
+                            android:gravity="left"
+                            android:layout_marginVertical="5dp"
+                            android:layout_marginHorizontal="5dp">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                android:background="@drawable/icon_color"
+                                >
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:padding="10dp"
+                                    android:src="@drawable/histroy"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"
+                                android:text="Histroy"
+                                android:gravity="center"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:orientation="vertical"
+                            android:gravity="left"
+                            android:layout_marginVertical="5dp"
+                            android:layout_marginHorizontal="5dp">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                android:background="@drawable/icon_color"
+                                >
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:padding="10dp"
+                                    android:src="@drawable/purchases"
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"
+                                android:text="purchases"
+                                android:gravity="center"
+                                />
+                        </LinearLayout>
+                    </GridLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!--       neww alignment for the content below-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="14dp"
+                >
+
+                <!--            blank space-->
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:background="@drawable/icon_color"-->
+                <!--                    android:orientation="vertical"-->
+                <!--                    android:layout_marginVertical="10dp"-->
+                <!--                    >-->
+                <!--                    <TextView-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:text="Blank"-->
+                <!--                        android:padding="30dp"-->
+                <!--                        />-->
+                <!--                </LinearLayout>-->
+
+                <!--            recent and view all-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="15dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="Recent sales"
+                        android:textSize="14sp"
+                        android:textColor="@color/blue"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="View All"
+                        android:textSize="14sp"
+                        android:textColor="@color/blue" />
+                </RelativeLayout>
+
+                <!--            scrollview for the sales-->
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardElevation="2dp"
+                            android:layout_marginVertical="4dp"
+                            android:layout_marginHorizontal="2dp"
+                            app:cardCornerRadius="5dp"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginHorizontal="5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginVertical="5dp"
+                                        android:text="Maize (800kgs)"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginVertical="8dp"
+                                        android:text="Thrusday 23/6/2022"
+                                        android:textSize="10sp"
+
+                                        />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="UGX 3450000"
+                                        android:textColor="@color/lightblack"
+                                        />
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/more"
+                                        android:layout_marginHorizontal="5dp"
+                                        />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardElevation="2dp"
+                            android:layout_marginVertical="4dp"
+                            android:layout_marginHorizontal="2dp"
+                            app:cardCornerRadius="5dp"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginHorizontal="5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginVertical="5dp"
+                                        android:text="Maize (800kgs)"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginVertical="8dp"
+                                        android:text="Thrusday 23/6/2022"
+                                        android:textSize="10sp"
+
+                                        />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="UGX 3450000"
+                                        android:textColor="@color/lightblack"
+                                        />
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/more"
+                                        android:layout_marginHorizontal="5dp"
+                                        />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardElevation="2dp"
+                            android:layout_marginVertical="4dp"
+                            android:layout_marginHorizontal="2dp"
+                            app:cardCornerRadius="5dp"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginHorizontal="5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginVertical="5dp"
+                                        android:text="Maize (800kgs)"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginVertical="8dp"
+                                        android:text="Thrusday 23/6/2022"
+                                        android:textSize="10sp"
+
+                                        />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="UGX 3450000"
+                                        android:textColor="@color/lightblack"
+                                        />
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/more"
+                                        android:layout_marginHorizontal="5dp"
+                                        />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardElevation="2dp"
+                            android:layout_marginVertical="4dp"
+                            android:layout_marginHorizontal="2dp"
+                            app:cardCornerRadius="5dp"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginHorizontal="5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginVertical="5dp"
+                                        android:text="Maize (800kgs)"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginVertical="8dp"
+                                        android:text="Thrusday 23/6/2022"
+                                        android:textSize="10sp"
+
+                                        />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="UGX 3450000"
+                                        android:textColor="@color/lightblack"
+                                        />
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/more"
+                                        android:layout_marginHorizontal="5dp"
+                                        />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardElevation="2dp"
+                            android:layout_marginVertical="4dp"
+                            android:layout_marginHorizontal="2dp"
+                            app:cardCornerRadius="5dp"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginHorizontal="5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginVertical="5dp"
+                                        android:text="Maize (800kgs)"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginVertical="8dp"
+                                        android:text="Thrusday 23/6/2022"
+                                        android:textSize="10sp"
+
+                                        />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="UGX 3450000"
+                                        android:textColor="@color/lightblack"
+                                        />
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/more"
+                                        android:layout_marginHorizontal="5dp"
+                                        />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardElevation="2dp"
+                            android:layout_marginVertical="4dp"
+                            android:layout_marginHorizontal="2dp"
+                            app:cardCornerRadius="5dp"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginHorizontal="5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginVertical="5dp"
+                                        android:text="Maize (800kgs)"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginVertical="8dp"
+                                        android:text="Thrusday 23/6/2022"
+                                        android:textSize="10sp"
+
+                                        />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerInParent="true"
+                                    >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="UGX 3450000"
+                                        android:textColor="@color/lightblack"
+                                        />
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/more"
+                                        android:layout_marginHorizontal="5dp"
+                                        />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</FrameLayout>
